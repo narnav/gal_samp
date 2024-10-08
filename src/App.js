@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () => {
+    const [x, setx] = useState(-7)
+
+    return (
+        <div>App
+            <h1>{x * 7}</h1>
+            <button onClick={()=>setx(9)} >clear <h1>{x}</h1></button>
+            <button onClick={()=>setx(x-1)} >sub <h1>{x}</h1></button>
+            <button onClick={()=>setx(x+1)} >add <h1>{x}</h1></button>
+        </div>
+    )
 }
 
-export default App;
+export default App
